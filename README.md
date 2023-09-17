@@ -1,4 +1,7 @@
-# Hello everybody, I'm Alex.
+# Hello everybody!
+
+<p>Welcome to my welcome page. I am Alex and I'm an IAM engineer. I have a passion for IT and I am learning more about cybersecurity and coding in order to transition into either a Red or Blue team job.
+Below you will find my projects and soon my blog posts as well.</p>
 
 <p align="center"><a href="https://github.com/anuraghazra/github-readme-stats">
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=anubis619&show_icons=true&theme=tokyonight" />
@@ -21,6 +24,11 @@
 ### 👷 Check out what I'm currently working on
 
 - [anubis619/siem_project](https://github.com/anubis619/siem_project) - Wazuh SIEM personal project
+
+### 📚 Check out what I'm currently learning
+- [Coursera - Google Cybersecurity Professional Certificate](https://www.coursera.org/professional-certificates/google-cybersecurity)
+- [Coursera - Microsoft Cybersecurity Analyst Professional Certificate](https://www.coursera.org/professional-certificates/microsoft-cybersecurity-analyst)
+- [edX - CS50's Introduction to Programming with Python ](https://pll.harvard.edu/course/cs50s-introduction-programming-python)
 
 ### 🌱 My latest projects
 
