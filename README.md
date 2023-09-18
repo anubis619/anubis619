@@ -3,6 +3,8 @@
 <p>Welcome to my welcome page. I am Alex and I'm an IAM engineer. I have a passion for IT and I am learning more about cybersecurity and coding in order to transition into either a Red or Blue team job.
 Below you will find my projects and soon my blog posts as well.</p>
 
+<p>I have not decided on Blue or Red at this time as I would like to get more details on what each path does and which one I actually like. Do achieve this I am looking to build home projects and learn and play on HackTheBox, TryHackMe, LetsDefend, BlueTeamLabs, etc.</p>
+
 <p align="center"><a href="https://github.com/anuraghazra/github-readme-stats">
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=anubis619&show_icons=true&theme=tokyonight" />
 </a></p>
