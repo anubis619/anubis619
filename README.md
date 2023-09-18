@@ -24,6 +24,7 @@ Below you will find my projects and soon my blog posts as well.</p>
 ### 👷 Check out what I'm currently working on
 
 - [anubis619/siem_project](https://github.com/anubis619/siem_project) - Wazuh SIEM personal project
+- [anubis619/zergling_worm](https://github.com/anubis619/zergling_worm) - Python worm for learning purpose
 
 ### 📚 Check out what I'm currently learning
 - [Coursera - Google Cybersecurity Professional Certificate](https://www.coursera.org/professional-certificates/google-cybersecurity)
@@ -33,3 +34,4 @@ Below you will find my projects and soon my blog posts as well.</p>
 ### 🌱 My latest projects
 
 - [anubis619/siem_project](https://github.com/anubis619/siem_project) - Wazuh SIEM personal project
+- - [anubis619/zergling_worm](https://github.com/anubis619/zergling_worm) - A simple "worm" built in Python to better understand how a worm virus functions and replicates itself. Definitely not how it would work in real life but I tried to replicate the same behavior it would do.
