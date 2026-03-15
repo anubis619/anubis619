@@ -169,7 +169,9 @@ My monitoring and detection pipeline includes:
 
 # 🐍 Contribution Graph
 
-![snake gif](https://github.com/anubis619/anubis619/blob/output/github-contribution-grid-snake.svg)
+<p align="center">
+  <img src="https://github.com/anubis619/anubis619/blob/output/github-contribution-grid-snake.svg" alt="snake animation" />
+</p>)
 
 ---
 
