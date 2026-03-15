@@ -1,35 +1,182 @@
-# Hello everybody!
+# 👋 Hello, I'm Alex
 
-<p>Welcome to my welcome page. I am Alex and I'm an IAM engineer. I have a passion for IT and I am learning more about cybersecurity and coding for home projects or learning new things.</p>
+IAM Engineer focused on **Identity, Security Engineering, and Infrastructure Automation**.
 
-<p align="center"><a href="https://github.com/anuraghazra/github-readme-stats">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=anubis619&show_icons=true&theme=tokyonight" />
-</a></p>
+I enjoy building systems that are **secure, observable, and reproducible** using tools like Terraform, Linux, and modern cloud platforms.
 
-<p align="center"><a href="https://wakatime.com/@anubis619">
-  <img align="center" width="400" height="300" src="https://wakatime.com/share/@anubis619/d62dfefc-3dee-4d20-8681-d38b8d88bdee.svg" />
+Outside of work I build **homelab infrastructure, SIEM systems, and developer tools** to explore security, monitoring, and automation.
+
+---
+
+# 🔐 Areas of Focus
+
+- Identity & Access Management
+- Security Engineering
+- Detection Engineering / SIEM
+- Infrastructure as Code
+- Homelab Automation
+- Backend Development (Go)
+
+---
+
+# 🧰 Technology Stack
+
+### Languages
+
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python)
+![Bash](https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnubash)
+
+### Infrastructure
+
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux)
+
+### IAM & Security
+
+![Okta](https://img.shields.io/badge/Okta-007DC1?style=for-the-badge&logo=okta)
+![Azure](https://img.shields.io/badge/Microsoft%20Entra-0078D4?style=for-the-badge)
+![Active Directory](https://img.shields.io/badge/Active%20Directory-003366?style=for-the-badge)
+![Wazuh](https://img.shields.io/badge/Wazuh-SIEM-blue?style=for-the-badge)
+
+### Observability
+
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus)
+![Loki](https://img.shields.io/badge/Loki-000000?style=for-the-badge)
+
+---
+
+# 🚀 Featured Projects
+
+### 📚 Chronicle
+Go CLI tool that collects **book metadata via ISBN** and stores it in a database used for **Grafana dashboards and reading analytics**.
+
+Features:
+
+- ISBN normalization
+- Metadata ingestion
+- PostgreSQL storage
+- Grafana visualization
+
+---
+
+### 🔍 SIEM Project
+
+Personal **Wazuh-based SIEM lab** used to explore:
+
+- detection engineering
+- log ingestion
+- security monitoring
+- alert pipelines
+
+---
+
+### 🧠 Terraform Homelab
+
+Infrastructure-as-Code driven homelab including:
+
+- monitoring stack
+- DNS infrastructure
+- SIEM deployment
+- media services
+- automation pipelines
+
+All infrastructure is **fully reproducible using Terraform**.
+
+---
+
+# 🖥 Homelab Architecture
+
+```mermaid
+flowchart LR
+
+Internet --> Cloudflare
+Cloudflare --> VPS
+
+subgraph VPS
+Ardan[Fedora VPS]
+Ardan --> Monitoring
+Ardan --> ReverseProxy
+end
+
+subgraph HomeLab
+Drassil[Arch Linux Server]
+Domhain[Raspberry Pi Node]
+
+Drassil --> Docker
+Drassil --> Grafana
+Drassil --> Wazuh
+Drassil --> MediaStack
+
+Domhain --> DNS
+Domhain --> Automation
+end
+
+VPS --> HomeLab
+```
+
+---
+
+# 📈 Security & Monitoring Stack
+
+My monitoring and detection pipeline includes:
+
+| Component | Purpose |
+|--------|--------|
+| Wazuh | SIEM / Threat Detection |
+| Grafana | Observability dashboards |
+| Prometheus | Metrics collection |
+| Loki | Log aggregation |
+| Terraform | Infrastructure provisioning |
+| Docker | Service orchestration |
+
+---
+
+# 📊 Development Activity
+
+<p align="center">
+<a href="https://github.com/anuraghazra/github-readme-stats">
+<img src="https://github-readme-stats.vercel.app/api?username=anubis619&show_icons=true&theme=tokyonight" />
 </a>
-<a href="https://wakatime.com/@anubis619">
-  <img align="center" width="400" height="300" src="https://wakatime.com/share/@anubis619/399309c5-08a6-406e-8747-15a342eb9ae5.svg" />
-</a></p>
+</p>
 
-<p align="center"><a href="https://wakatime.com/@anubis619">
-  <img align="center" width="400" height="300" src="https://wakatime.com/share/@anubis619/43459417-56d1-478f-9e86-666f24cea402.svg" />
+<p align="center">
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=anubis619&theme=tokyonight" />
+</p>
+
+---
+
+# ⚡ Coding Activity
+
+<p align="center">
+<a href="https://wakatime.com/@anubis619">
+<img width="500" src="https://wakatime.com/share/@anubis619/d62dfefc-3dee-4d20-8681-d38b8d88bdee.svg" />
 </a>
-<a href="https://wakatime.com/@anubis619">
-  <img align="center" width="400" height="300" src="https://wakatime.com/share/@anubis619/07485fc6-4620-457f-aa6f-f2f496f39abe.svg" />
-</a></p>
+</p>
 
-### 👷 Check out what I'm currently working on
+---
 
-- [anubis619/siem_project](https://github.com/anubis619/siem_project) - Wazuh SIEM personal project
-- [anubis619/zergling_worm](https://github.com/anubis619/zergling_worm) - Python worm for learning purpose
+# 🌱 Currently Learning
 
-### 📚 Check out what I'm currently learning
-- [edX - CS50's Introduction to Programming with Python ](https://pll.harvard.edu/course/cs50s-introduction-programming-python)
-- [LEARN OBJECT ORIENTED PROGRAMMING](https://www.boot.dev/learn/learn-object-oriented-programming)
+- Go development for CLI tools
+- Detection engineering
+- Security architecture
+- Advanced Terraform workflows
 
-### 🌱 My latest projects
+---
 
-- [anubis619/siem_project](https://github.com/anubis619/siem_project) - Wazuh SIEM personal project
-- [anubis619/zergling_worm](https://github.com/anubis619/zergling_worm) - A simple "worm" built using Python to better understand how a worm virus functions and replicates itself. It is only used to learn the replication phase, and nothing else. Even that is reduced to 1 machine and nothing else.
+# 🐍 Contribution Graph
+
+![snake gif](https://github.com/anubis619/anubis619/blob/output/github-contribution-grid-snake.svg)
+
+---
+
+# 📫 Connect With Me
+
+GitHub:  
+https://github.com/anubis619
+
+WakaTime:  
+https://wakatime.com/@anubis619
