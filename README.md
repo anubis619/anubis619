@@ -90,31 +90,38 @@ All infrastructure is **fully reproducible using Terraform**.
 # 🖥 Homelab Architecture
 
 ```mermaid
-flowchart LR
+flowchart TD
 
 Internet --> Cloudflare
-Cloudflare --> VPS
+Cloudflare --> Ardan
+Cloudflare --> Domhain
 
-subgraph VPS
-Ardan[Fedora VPS]
-Ardan --> Monitoring
-Ardan --> ReverseProxy
+subgraph VPS["Ardan - Fedora VPS"]
+    Ardan[Ardan]
+    Ardan --> Grafana[Grafana]
+    Ardan --> Wazuh[Wazuh]
+    Ardan --> Dozzle[Dozzle]
+    Ardan --> Beszel[Beszel]
+    Ardan --> Ops[Other operational services]
 end
 
-subgraph HomeLab
-Drassil[Arch Linux Server]
-Domhain[Raspberry Pi Node]
-
-Drassil --> Docker
-Drassil --> Grafana
-Drassil --> Wazuh
-Drassil --> MediaStack
-
-Domhain --> DNS
-Domhain --> Automation
+subgraph Home["Drassil - Main Home Server / Steam Machine"]
+    Drassil[Drassil]
+    Drassil --> Media[Media services]
+    Drassil --> Steam[Steam Machine role]
+    Drassil --> Sandbox[Sandbox Docker workloads]
+    Drassil --> BookDB[Book DB sandbox]
+    Drassil --> Future[Future self-hosted services]
 end
 
-VPS --> HomeLab
+subgraph Edge["Domhain - Raspberry Pi"]
+    Domhain[Domhain]
+    Domhain --> AdGuard[AdGuard]
+    Domhain --> Caddy[Caddy]
+end
+
+Ardan --> Drassil
+Domhain --> Drassil
 ```
 
 ---
@@ -179,6 +186,3 @@ My monitoring and detection pipeline includes:
 
 GitHub:  
 https://github.com/anubis619
-
-WakaTime:  
-https://wakatime.com/@anubis619
