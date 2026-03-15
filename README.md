@@ -73,55 +73,58 @@ Personal **Wazuh-based SIEM lab** used to explore:
 
 ---
 
-### 🧠 Terraform Homelab
+### 🧠 Terraform Homelab Infrastructure
 
-Infrastructure-as-Code driven homelab including:
+Infrastructure-as-Code driven homelab split across multiple roles:
 
-- monitoring stack
-- DNS infrastructure
-- SIEM deployment
-- media services
-- automation pipelines
+- **Domhain (Raspberry Pi):** lightweight edge services such as AdGuard and Caddy
+- **Drassil:** main hybrid machine acting as media server, Steam machine, and sandbox host
+- **Ardan (VPS):** monitoring, security, and operational tooling such as Grafana, Wazuh, Dozzle, and Beszel
 
-All infrastructure is **fully reproducible using Terraform**.
+This allows me to separate:
 
+- network edge services
+- monitoring and security tooling
+- media and experimental workloads
+
+All infrastructure is designed to be reproducible and easy to evolve over time.
 ---
 
 # 🖥 Homelab Architecture
 
 ```mermaid
-flowchart TD
+flowchart LR
 
 Internet --> Cloudflare
+
 Cloudflare --> Ardan
 Cloudflare --> Domhain
 
-subgraph VPS["Ardan - Fedora VPS"]
+subgraph ArdanVPS["Ardan · VPS / Monitoring & Security"]
     Ardan[Ardan]
-    Ardan --> Grafana[Grafana]
-    Ardan --> Wazuh[Wazuh]
-    Ardan --> Dozzle[Dozzle]
-    Ardan --> Beszel[Beszel]
-    Ardan --> Ops[Other operational services]
+    Ardan --> Grafana
+    Ardan --> Wazuh
+    Ardan --> Dozzle
+    Ardan --> Beszel
+    Ardan --> OtherOps[Other Ops Services]
 end
 
-subgraph Home["Drassil - Main Home Server / Steam Machine"]
-    Drassil[Drassil]
-    Drassil --> Media[Media services]
-    Drassil --> Steam[Steam Machine role]
-    Drassil --> Sandbox[Sandbox Docker workloads]
-    Drassil --> BookDB[Book DB sandbox]
-    Drassil --> Future[Future self-hosted services]
-end
-
-subgraph Edge["Domhain - Raspberry Pi"]
+subgraph DomhainPi["Domhain · Raspberry Pi / Edge Services"]
     Domhain[Domhain]
-    Domhain --> AdGuard[AdGuard]
-    Domhain --> Caddy[Caddy]
+    Domhain --> AdGuard
+    Domhain --> Caddy
 end
 
-Ardan --> Drassil
+subgraph DrassilHost["Drassil · Main Host / Media & Sandbox"]
+    Drassil[Drassil]
+    Drassil --> MediaServer[Media Services]
+    Drassil --> SteamMachine[Steam Machine]
+    Drassil --> BookSandbox[Book DB Sandbox]
+    Drassil --> DockerSandbox[Additional Docker Services]
+end
+
 Domhain --> Drassil
+Ardan --> Drassil
 ```
 
 ---
